@@ -7,6 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import FavAction from './FavAction';
+import {Helmet} from "react-helmet";
 
 const useStyles = makeStyles((theme) => ({
     navTitle:{
@@ -53,6 +54,12 @@ export default function MyFav() {
     const searchedItems = JSON.parse(localStorage.getItem("myFavList"));
   
     return (
+      <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>My Favourite List | Movie Database </title>
+        </Helmet>
+            
         <React.Fragment>
             <Container className={classes.searchResponseBox}>
 
@@ -99,5 +106,6 @@ export default function MyFav() {
   </Grid>
 </Container>
         </React.Fragment>
+        </div>
     )
 }

@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import { useHistory } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import {Helmet} from "react-helmet";
 
 const useStyles = makeStyles((theme) => ({
     infoWrapper:{
@@ -75,6 +76,10 @@ export default function SingleMovie() {
 
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{ movieInfo.Response === "True" ? movieInfo.Title+' | Movie Database' : 'Single Movie Page - Movie Database' }</title>
+            </Helmet>
              <Container className={classes.infoWrapper}>
                 
                 { movieInfo.Response === "True" ?

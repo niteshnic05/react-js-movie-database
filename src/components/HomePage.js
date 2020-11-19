@@ -13,6 +13,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from "react-router-dom";
 import FavAction from './FavAction';
+import {Helmet} from "react-helmet";
 
 const useStyles = makeStyles((theme) => ({
     navTitle:{
@@ -102,6 +103,10 @@ export default function HomePage() {
 
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Movie Database </title>
+            </Helmet>
             <Container>
             <Grid container spacing={3} justify="center">
                 <Paper component="form" className={classes.root}>
