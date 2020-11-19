@@ -58,6 +58,7 @@ export default function MyFav() {
 
       <Grid container  spacing={5} justify="center">
     { 
+    searchedItems ?
     searchedItems.length > 0 
     ?
     searchedItems.map((item) => (
@@ -93,7 +94,7 @@ export default function MyFav() {
         </Grid>
     ))
     : <p>Nothing found!</p>
-    
+    : <p>No item added to favourite list!</p>
     }
   </Grid>
 </Container>

@@ -80,7 +80,7 @@ export default function HomePage() {
         }else{
           movie_type = `&type=${mtype}`;
         }
-        fetch("http://www.omdbapi.com/?s="+searchField+movie_type+"&apikey=fd3a4124")
+        fetch("https://www.omdbapi.com/?s="+searchField+movie_type+"&apikey=fd3a4124")
             .then(res => res.json())
             .then(
                 (result) => {

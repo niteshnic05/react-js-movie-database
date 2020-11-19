@@ -53,7 +53,7 @@ export default function SingleMovie() {
 
     useEffect ( () => {
         function getsingleMovieInfo() {
-            fetch("http://www.omdbapi.com/?i="+movieId+"&apikey=fd3a4124")
+            fetch("https://www.omdbapi.com/?i="+movieId+"&apikey=fd3a4124")
             .then(res => res.json())
             .then(
                 (result) => {
